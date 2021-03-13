@@ -1,0 +1,3 @@
+[submodule "Crumble/vendor/spdlog"]
+	path = Crumble/vendor/spdlog
+	url = https://github.com/gabime/spdlog
