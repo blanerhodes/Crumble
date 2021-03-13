@@ -4,6 +4,9 @@
     <Filter Include="Crumble">
       <UniqueIdentifier>{0F43AC3B-7B22-2BD7-843A-B6ADF0989138}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Crumble\Events">
+      <UniqueIdentifier>{130834C0-FFD5-27C6-E869-98ECD4D6032B}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Crumble.h" />
@@ -16,8 +19,20 @@
     <ClInclude Include="src\Crumble\EntryPoint.h">
       <Filter>Crumble</Filter>
     </ClInclude>
+    <ClInclude Include="src\Crumble\Events\Event.h">
+      <Filter>Crumble\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Crumble\Events\KeyEvent.h">
+      <Filter>Crumble\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Crumble\Events\MouseEvent.h">
+      <Filter>Crumble\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Crumble\Log.h">
       <Filter>Crumble</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Crumble\Events\ApplicationEvent.h">
+      <Filter>Crumble\Events</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
