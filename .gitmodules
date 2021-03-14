@@ -1,3 +1,6 @@
 [submodule "Crumble/vendor/spdlog"]
 	path = Crumble/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Crumble/vendor/GLFW"]
+	path = Crumble/vendor/GLFW
+	url = https://github.com/TheCherno/glfw

@@ -35,6 +35,8 @@
       <Filter>Crumble</Filter>
     </ClInclude>
     <ClInclude Include="src\crpch.h" />
+    <ClInclude Include="src\Crumble\Window.h" />
+    <ClInclude Include="src\Crumble\Platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Crumble\Application.cpp">
@@ -44,5 +46,6 @@
       <Filter>Crumble</Filter>
     </ClCompile>
     <ClCompile Include="src\crpch.cpp" />
+    <ClCompile Include="src\Crumble\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>
