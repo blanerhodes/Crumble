@@ -18,7 +18,7 @@ project "Crumble"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
-	pchheader "crpch.h"	
+	pchheader "crpch.h"
 	pchsource "Crumble/src/crpch.cpp"
 
 	files

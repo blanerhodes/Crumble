@@ -13,6 +13,6 @@
 #include <unordered_set>
 
 
-#ifdef CR_PLATFORM WINDOWS
+#ifdef CR_PLATFORM_WINDOWS
 	#include <Windows.h>
 #endif
