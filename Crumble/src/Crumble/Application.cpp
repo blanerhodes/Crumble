@@ -1,3 +1,4 @@
+#include "crpch.h"
 #include "Application.h"
 
 #include "Crumble/Events/ApplicationEvent.h"

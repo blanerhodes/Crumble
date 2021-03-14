@@ -1,3 +1,4 @@
+#include "crpch.h"
 #include "Log.h"
 
 namespace Crumble {

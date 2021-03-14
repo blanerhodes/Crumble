@@ -1,7 +1,5 @@
 #pragma once
 
-#include <functional>
-
 #include "Crumble/Core.h"
 
 namespace Crumble {

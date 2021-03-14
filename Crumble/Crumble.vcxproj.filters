@@ -19,6 +19,9 @@
     <ClInclude Include="src\Crumble\EntryPoint.h">
       <Filter>Crumble</Filter>
     </ClInclude>
+    <ClInclude Include="src\Crumble\Events\ApplicationEvent.h">
+      <Filter>Crumble\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Crumble\Events\Event.h">
       <Filter>Crumble\Events</Filter>
     </ClInclude>
@@ -31,9 +34,7 @@
     <ClInclude Include="src\Crumble\Log.h">
       <Filter>Crumble</Filter>
     </ClInclude>
-    <ClInclude Include="src\Crumble\Events\ApplicationEvent.h">
-      <Filter>Crumble\Events</Filter>
-    </ClInclude>
+    <ClInclude Include="src\crpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Crumble\Application.cpp">
@@ -42,5 +43,6 @@
     <ClCompile Include="src\Crumble\Log.cpp">
       <Filter>Crumble</Filter>
     </ClCompile>
+    <ClCompile Include="src\crpch.cpp" />
   </ItemGroup>
 </Project>
