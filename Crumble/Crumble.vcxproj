@@ -79,8 +79,8 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>crpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>CR_PLATFORM_WINDOWS;CR_BUILD_DLL;CR_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CR_PLATFORM_WINDOWS;CR_BUILD_DLL;GLFW_INCLUDE_NONE;CR_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -102,8 +102,8 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>crpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>CR_PLATFORM_WINDOWS;CR_BUILD_DLL;CR_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CR_PLATFORM_WINDOWS;CR_BUILD_DLL;GLFW_INCLUDE_NONE;CR_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -129,8 +129,8 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>crpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>CR_PLATFORM_WINDOWS;CR_BUILD_DLL;CR_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CR_PLATFORM_WINDOWS;CR_BUILD_DLL;GLFW_INCLUDE_NONE;CR_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -160,18 +160,27 @@
     <ClInclude Include="src\Crumble\Events\Event.h" />
     <ClInclude Include="src\Crumble\Events\KeyEvent.h" />
     <ClInclude Include="src\Crumble\Events\MouseEvent.h" />
+    <ClInclude Include="src\Crumble\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\Crumble\Input.h" />
+    <ClInclude Include="src\Crumble\KeyCodes.h" />
     <ClInclude Include="src\Crumble\Layer.h" />
     <ClInclude Include="src\Crumble\LayerStack.h" />
     <ClInclude Include="src\Crumble\Log.h" />
+    <ClInclude Include="src\Crumble\MouseButtonCodes.h" />
+    <ClInclude Include="src\Crumble\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
+    <ClInclude Include="src\Crumble\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Crumble\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Crumble\Window.h" />
     <ClInclude Include="src\crpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Crumble\Application.cpp" />
+    <ClCompile Include="src\Crumble\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\Crumble\Layer.cpp" />
     <ClCompile Include="src\Crumble\LayerStack.cpp" />
     <ClCompile Include="src\Crumble\Log.cpp" />
+    <ClCompile Include="src\Crumble\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
+    <ClCompile Include="src\Crumble\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Crumble\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\crpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
@@ -180,6 +189,12 @@
   <ItemGroup>
     <ProjectReference Include="vendor\GLFW\GLFW.vcxproj">
       <Project>{154B857C-0182-860D-AA6E-6C109684020F}</Project>
+    </ProjectReference>
+    <ProjectReference Include="vendor\Glad\Glad.vcxproj">
+      <Project>{BDD6857C-A90D-870D-52FA-6C103E10030F}</Project>
+    </ProjectReference>
+    <ProjectReference Include="vendor\imgui\ImGui.vcxproj">
+      <Project>{C0FF640D-2C14-8DBE-F595-301E616989EF}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

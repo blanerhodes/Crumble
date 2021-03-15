@@ -5,6 +5,8 @@
 #include "Crumble/Events/KeyEvent.h"
 #include "Crumble/Events/MouseEvent.h"
 
+#include <glad/glad.h>
+
 namespace Crumble {
 
 	static bool s_GLFWInitialized = false;
@@ -42,6 +44,8 @@ namespace Crumble {
 
 		m_Window = glfwCreateWindow((int)m_Data.Width, (int)m_Data.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		CR_CORE_ASSERT(status, "Failed to init Glad");
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 
@@ -88,6 +92,13 @@ namespace Crumble {
 					break;
 				}
 			}
+		});
+
+		glfwSetCharCallback(m_Window, [](GLFWwindow* window, unsigned int keycode)
+		{
+			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+			KeyTypedEvent event(keycode);
+			data.EventCallback(event);
 		});
 
 		glfwSetMouseButtonCallback(m_Window, [](GLFWwindow* window, int button, int action, int mods) 

@@ -4,3 +4,6 @@
 [submodule "Crumble/vendor/GLFW"]
 	path = Crumble/vendor/GLFW
 	url = https://github.com/TheCherno/glfw
+[submodule "Crumble/vendor/imgui"]
+	path = Crumble/vendor/imgui
+	url = https://github.com/TheCherno/imgui

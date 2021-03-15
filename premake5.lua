@@ -13,8 +13,12 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Includes relative to root (sln dir)
 IncludeDir = {}
 IncludeDir["GLFW"] = "Crumble/vendor/GLFW/include"
+IncludeDir["Glad"] = "Crumble/vendor/Glad/include"
+IncludeDir["ImGui"] = "Crumble/vendor/imgui"
 
 include "Crumble/vendor/GLFW"
+include "Crumble/vendor/Glad"
+include "Crumble/vendor/imgui"
 
 project "Crumble"
 	location "Crumble"
@@ -37,12 +41,16 @@ project "Crumble"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}",
+		"%{IncludeDir.ImGui}"
 	}
 
 	links
 	{
 		"GLFW",
+		"Glad",
+		"ImGui",
 		"opengl32.lib"
 	}
 
@@ -54,7 +62,8 @@ project "Crumble"
 		defines
 		{
 			"CR_PLATFORM_WINDOWS",
-			"CR_BUILD_DLL"
+			"CR_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands
