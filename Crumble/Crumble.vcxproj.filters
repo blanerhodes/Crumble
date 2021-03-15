@@ -7,6 +7,12 @@
     <Filter Include="Crumble\Events">
       <UniqueIdentifier>{130834C0-FFD5-27C6-E869-98ECD4D6032B}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Crumble\Platform">
+      <UniqueIdentifier>{436074B9-2F59-930B-588B-789044E37217}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crumble\Platform\Windows">
+      <UniqueIdentifier>{7D9D739A-69C2-C21A-920D-A8AA7E91C138}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Crumble.h" />
@@ -31,21 +37,39 @@
     <ClInclude Include="src\Crumble\Events\MouseEvent.h">
       <Filter>Crumble\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Crumble\Layer.h">
+      <Filter>Crumble</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Crumble\LayerStack.h">
+      <Filter>Crumble</Filter>
+    </ClInclude>
     <ClInclude Include="src\Crumble\Log.h">
       <Filter>Crumble</Filter>
     </ClInclude>
+    <ClInclude Include="src\Crumble\Platform\Windows\WindowsWindow.h">
+      <Filter>Crumble\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Crumble\Window.h">
+      <Filter>Crumble</Filter>
+    </ClInclude>
     <ClInclude Include="src\crpch.h" />
-    <ClInclude Include="src\Crumble\Window.h" />
-    <ClInclude Include="src\Crumble\Platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Crumble\Application.cpp">
       <Filter>Crumble</Filter>
     </ClCompile>
+    <ClCompile Include="src\Crumble\Layer.cpp">
+      <Filter>Crumble</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Crumble\LayerStack.cpp">
+      <Filter>Crumble</Filter>
+    </ClCompile>
     <ClCompile Include="src\Crumble\Log.cpp">
       <Filter>Crumble</Filter>
     </ClCompile>
+    <ClCompile Include="src\Crumble\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Crumble\Platform\Windows</Filter>
+    </ClCompile>
     <ClCompile Include="src\crpch.cpp" />
-    <ClCompile Include="src\Crumble\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>

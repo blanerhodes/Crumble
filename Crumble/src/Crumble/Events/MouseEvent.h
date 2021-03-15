@@ -29,8 +29,7 @@ namespace Crumble {
 	class MouseScrolledEvent : public Event
 	{
 	public:
-		MouseScrolledEvent(float xOffset, float yOffset)
-			: m_XOffset(xOffset), m_YOffset(yOffset) {}
+		MouseScrolledEvent(float xOffset, float yOffset) : m_XOffset(xOffset), m_YOffset(yOffset) {}
 
 		float GetXOffset() const { return m_XOffset; }
 		float GetYOffset() const { return m_YOffset; }
@@ -55,8 +54,7 @@ namespace Crumble {
 
 		EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput | EventCategoryMouseButton)
 	protected:
-		MouseButtonEvent(int button)
-			: m_Button(button) {}
+		MouseButtonEvent(int button) : m_Button(button) {}
 
 		int m_Button;
 	};
