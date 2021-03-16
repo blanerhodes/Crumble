@@ -17,7 +17,7 @@ namespace Crumble {
 	};
 
 	// Inteface representing a desktop system based Window
-	class CRUMBLE_API Window
+	class Window
 	{
 	public:
 		using EventCallbackFn = std::function<void(Event&)>;

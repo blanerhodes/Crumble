@@ -6,7 +6,7 @@
 #include "spdlog/fmt/ostr.h"
 
 namespace Crumble {
-	class CRUMBLE_API Log
+	class Log
 	{
 	public:
 		static void Init();

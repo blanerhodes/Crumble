@@ -1,5 +1,6 @@
 #include <Crumble.h>
 
+#include "imgui/imgui.h"
 
 class ExampleLayer : public Crumble::Layer 
 {
@@ -25,7 +26,6 @@ public:
 	Sandbox()
 	{
 		PushLayer(new ExampleLayer());
-		PushOverlay(new Crumble::ImGuiLayer());
 	}
 
 	~Sandbox()

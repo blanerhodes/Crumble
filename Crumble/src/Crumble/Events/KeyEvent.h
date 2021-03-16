@@ -4,7 +4,7 @@
 
 namespace Crumble {
 
-	class CRUMBLE_API KeyEvent : public Event
+	class KeyEvent : public Event
 	{
 	public:
 		inline int GetKeyCode() const { return m_KeyCode; }
@@ -17,7 +17,7 @@ namespace Crumble {
 		int m_KeyCode;
 	};
 
-	class CRUMBLE_API KeyPressedEvent : public KeyEvent
+	class KeyPressedEvent : public KeyEvent
 	{
 	public:
 		KeyPressedEvent(int keycode, int repeatCount)
@@ -37,7 +37,7 @@ namespace Crumble {
 		int m_RepeatCount;
 	};
 
-	class CRUMBLE_API KeyReleasedEvent : public KeyEvent
+	class KeyReleasedEvent : public KeyEvent
 	{
 	public:
 		KeyReleasedEvent(int keycode)
@@ -53,7 +53,7 @@ namespace Crumble {
 		EVENT_CLASS_TYPE(KeyReleased)
 	};
 
-	class CRUMBLE_API KeyTypedEvent : public KeyEvent
+	class KeyTypedEvent : public KeyEvent
 	{
 	public:
 		KeyTypedEvent(int keycode)

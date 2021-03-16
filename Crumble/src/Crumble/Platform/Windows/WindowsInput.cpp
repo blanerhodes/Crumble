@@ -27,7 +27,7 @@ namespace Crumble {
 		auto window = static_cast<GLFWwindow*>(Application::Get().GetWindow().GetNativeWindow());
 		double xpos, ypos;
 		glfwGetCursorPos(window, &xpos, &ypos);
-		return std::pair<float, float>(xpos, ypos);
+		return std::pair<float, float>((float)xpos, (float)ypos);
 	}
 
 	float WindowsInput::GetMouseXImpl()

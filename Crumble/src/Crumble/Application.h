@@ -6,11 +6,11 @@
 #include "Crumble/LayerStack.h"
 #include "Events/Event.h"
 #include "Crumble/Events/ApplicationEvent.h"
-
+#include "Crumble/ImGui/ImGuiLayer.h"
 
 namespace Crumble {
 
-	class CRUMBLE_API Application
+	class Application
 	{
 	public:
 		Application();
@@ -27,7 +27,9 @@ namespace Crumble {
 		inline Window& GetWindow() { return *m_Window; }
 	private:
 		bool OnWindowClose(WindowCloseEvent& e);
+
 		std::unique_ptr<Window> m_Window;
+		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 

@@ -7,3 +7,6 @@
 [submodule "Crumble/vendor/imgui"]
 	path = Crumble/vendor/imgui
 	url = https://github.com/TheCherno/imgui
+[submodule "Crumble/vendor/glm"]
+	path = Crumble/vendor/glm
+	url = https://github.com/g-truc/glm

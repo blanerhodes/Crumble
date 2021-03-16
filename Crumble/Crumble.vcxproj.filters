@@ -13,9 +13,6 @@
     <Filter Include="Crumble\Platform">
       <UniqueIdentifier>{436074B9-2F59-930B-588B-789044E37217}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Crumble\Platform\OpenGL">
-      <UniqueIdentifier>{17C05F76-83F7-A70D-8C01-0C31F8B7CE06}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Crumble\Platform\Windows">
       <UniqueIdentifier>{7D9D739A-69C2-C21A-920D-A8AA7E91C138}</UniqueIdentifier>
     </Filter>
@@ -46,6 +43,12 @@
     <ClInclude Include="src\Crumble\ImGui\ImGuiLayer.h">
       <Filter>Crumble\ImGui</Filter>
     </ClInclude>
+    <ClInclude Include="src\Crumble\Input.h">
+      <Filter>Crumble</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Crumble\KeyCodes.h">
+      <Filter>Crumble</Filter>
+    </ClInclude>
     <ClInclude Include="src\Crumble\Layer.h">
       <Filter>Crumble</Filter>
     </ClInclude>
@@ -55,8 +58,11 @@
     <ClInclude Include="src\Crumble\Log.h">
       <Filter>Crumble</Filter>
     </ClInclude>
-    <ClInclude Include="src\Crumble\Platform\OpenGL\ImGuiOpenGLRenderer.h">
-      <Filter>Crumble\Platform\OpenGL</Filter>
+    <ClInclude Include="src\Crumble\MouseButtonCodes.h">
+      <Filter>Crumble</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Crumble\Platform\Windows\WindowsInput.h">
+      <Filter>Crumble\Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\Crumble\Platform\Windows\WindowsWindow.h">
       <Filter>Crumble\Platform\Windows</Filter>
@@ -65,14 +71,13 @@
       <Filter>Crumble</Filter>
     </ClInclude>
     <ClInclude Include="src\crpch.h" />
-    <ClInclude Include="src\Crumble\Input.h" />
-    <ClInclude Include="src\Crumble\Platform\Windows\WindowsInput.h" />
-    <ClInclude Include="src\Crumble\KeyCodes.h" />
-    <ClInclude Include="src\Crumble\MouseButtonCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Crumble\Application.cpp">
       <Filter>Crumble</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Crumble\ImGui\ImGuiBuild.cpp">
+      <Filter>Crumble\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="src\Crumble\ImGui\ImGuiLayer.cpp">
       <Filter>Crumble\ImGui</Filter>
@@ -86,13 +91,12 @@
     <ClCompile Include="src\Crumble\Log.cpp">
       <Filter>Crumble</Filter>
     </ClCompile>
-    <ClCompile Include="src\Crumble\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
-      <Filter>Crumble\Platform\OpenGL</Filter>
+    <ClCompile Include="src\Crumble\Platform\Windows\WindowsInput.cpp">
+      <Filter>Crumble\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\Crumble\Platform\Windows\WindowsWindow.cpp">
       <Filter>Crumble\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\crpch.cpp" />
-    <ClCompile Include="src\Crumble\Platform\Windows\WindowsInput.cpp" />
   </ItemGroup>
 </Project>
