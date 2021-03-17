@@ -8,6 +8,10 @@
 #include "Crumble/Events/ApplicationEvent.h"
 #include "Crumble/ImGui/ImGuiLayer.h"
 
+#include "Crumble/Renderer/Shader.h"
+#include "Crumble/Renderer/Buffer.h"
+#include "Crumble/Renderer/VertexArray.h"
+
 namespace Crumble {
 
 	class Application
@@ -32,6 +36,12 @@ namespace Crumble {
 		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
+
+		std::shared_ptr<Shader> m_Shader;
+		std::shared_ptr<VertexArray> m_VertexArray;
+		
+		std::shared_ptr<Shader> m_BlueShader;
+		std::shared_ptr<VertexArray> m_SquareVA;
 
 		static Application* s_Instance;
 	};

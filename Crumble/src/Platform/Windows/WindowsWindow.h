@@ -1,8 +1,11 @@
 #pragma once
 
 #include "Crumble/Window.h"
+#include "Crumble/Renderer/GraphicsContext.h"
+
 
 #include <GLFW/glfw3.h>
+
 
 namespace Crumble {
 
@@ -28,6 +31,7 @@ namespace Crumble {
 		virtual void Shutdown();
 	private:
 		GLFWwindow* m_Window;
+		GraphicsContext* m_Context;
 
 		struct WindowData
 		{

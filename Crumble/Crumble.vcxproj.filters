@@ -61,16 +61,27 @@
     <ClInclude Include="src\Crumble\MouseButtonCodes.h">
       <Filter>Crumble</Filter>
     </ClInclude>
-    <ClInclude Include="src\Crumble\Platform\Windows\WindowsInput.h">
-      <Filter>Crumble\Platform\Windows</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Crumble\Platform\Windows\WindowsWindow.h">
-      <Filter>Crumble\Platform\Windows</Filter>
-    </ClInclude>
     <ClInclude Include="src\Crumble\Window.h">
       <Filter>Crumble</Filter>
     </ClInclude>
     <ClInclude Include="src\crpch.h" />
+    <ClInclude Include="src\Crumble\Renderer\GraphicsContext.h" />
+    <ClInclude Include="src\Crumble\Renderer\Shader.h" />
+    <ClInclude Include="src\Crumble\Renderer\Buffer.h" />
+    <ClInclude Include="src\Crumble\Renderer\Renderer.h" />
+    <ClInclude Include="src\Crumble\Renderer\VertexArray.h" />
+    <ClInclude Include="src\Crumble\Renderer\RendererAPI.h" />
+    <ClInclude Include="src\Crumble\Renderer\RenderCommand.h" />
+    <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h" />
+    <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
+    <ClInclude Include="src\Platform\OpenGL\OpenGLVertexArray.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h">
+      <Filter>Crumble\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Crumble\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLRendererAPI.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Crumble\Application.cpp">
@@ -91,12 +102,22 @@
     <ClCompile Include="src\Crumble\Log.cpp">
       <Filter>Crumble</Filter>
     </ClCompile>
-    <ClCompile Include="src\Crumble\Platform\Windows\WindowsInput.cpp">
-      <Filter>Crumble\Platform\Windows</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Crumble\Platform\Windows\WindowsWindow.cpp">
-      <Filter>Crumble\Platform\Windows</Filter>
-    </ClCompile>
     <ClCompile Include="src\crpch.cpp" />
+    <ClCompile Include="src\Crumble\Renderer\Shader.cpp" />
+    <ClCompile Include="src\Crumble\Renderer\Buffer.cpp" />
+    <ClCompile Include="src\Crumble\Renderer\Renderer.cpp" />
+    <ClCompile Include="src\Crumble\Renderer\VertexArray.cpp" />
+    <ClCompile Include="src\Crumble\Renderer\RendererAPI.cpp" />
+    <ClCompile Include="src\Crumble\Renderer\RenderCommand.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\OpenGLVertexArray.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp">
+      <Filter>Crumble\Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Crumble\Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLRendererAPI.cpp" />
   </ItemGroup>
 </Project>
